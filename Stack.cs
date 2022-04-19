@@ -26,13 +26,24 @@ namespace ExpressionsCalculation
 
         public T Pop()
         {
-            if (_cursor < 0)
-                return default;
+            if (IsEmpty())
+                throw new Exception("Stack is empty. Unable to pop item");
 
             var lastItem = _array[_cursor];
             _cursor--;
 
             return lastItem;
         }
+
+        public T Peek()
+        {
+            if (IsEmpty())
+                throw new Exception("Stack is empty. Unable to peek item");
+            else
+                return _array[_cursor];
+        }
+
+        public bool IsEmpty()
+        => _cursor < 0;
     }
 }

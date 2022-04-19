@@ -9,7 +9,7 @@ namespace ExpressionsCalculation
             Console.Write("Enter expression: ");
             string expression = Console.ReadLine();
 
-            var result = ExpressionCalculator.Calculate(expression);
+            var result = new ExpressionCalculator().Calculate(expression);
             Console.WriteLine($"Result: {result}");
         }
     }
