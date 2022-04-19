@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ExpressionsCalculation
 {
-    public class ExpressionCalculator
+    public class ExpressionsCalculator
     {
         private Dictionary<char, int> _operatorToIndexMap = new Dictionary<char, int>
         {
